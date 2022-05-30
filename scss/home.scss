@@ -1,0 +1,387 @@
+header {
+    background: url('../imgs/header-bg.jpg') center no-repeat;
+    background-size: cover;
+
+    .header-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 1601px) {
+            flex-wrap: wrap;
+        }
+
+        .header-details-content {
+            @media only screen and (max-width: 1601px) {
+                padding: 64px 0px;
+            }
+
+            h1 {
+                font-size: 120px;
+                text-transform: uppercase;
+                color: var(--white);
+                max-width: 60%;
+
+                @media only screen and (max-width: 1600px) {
+                    max-width: 100%;
+                    font-size: 64px;
+                }
+
+
+            }
+
+            p {
+                font-size: 32px;
+                color: var(--white);
+                text-transform: uppercase;
+                max-width: calc(100% - 600px);
+                margin-top: -20px;
+
+                @media only screen and (max-width: 1600px) {
+                    max-width: 100%;
+                    margin-top: 8px;
+                }
+
+                @media only screen and (max-width: 1600px) {
+                    font-size: 20px;
+                }
+
+            }
+
+            .btn {
+                margin-top: 14px;
+            }
+        }
+
+        .slider-bar {
+            padding: 15px;
+            background: var(--white);
+            position: relative;
+
+            @media only screen and (max-width: 1601px) {
+                width: 100%;
+            }
+
+            .slider-dots {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                bottom: 10%;
+                left: -150px;
+                cursor: pointer;
+
+                @media only screen and (max-width: 1601px) {
+                    top: -40px;
+                    bottom: unset;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .slider-dot {
+                    margin: 0px 4px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.5);
+
+                    &.active {
+                        background: var(--white);
+                    }
+                }
+            }
+
+            .slides {
+                overflow: hidden;
+
+                .slide {
+                    display: none;
+
+                    &.active {
+                        animation: sliderTransitionShow .3s ease-in-out;
+                        display: block;
+
+                        @media only screen and (max-width: 1601px) {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+
+                            .photo {
+                                max-width: calc(100% / 2 - 16px);
+                                width: 100%;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cordless-systems {
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 1161px) {
+            flex-wrap: wrap;
+        }
+
+        .cordless-system {
+            max-width: calc(100% / 3 - 16px);
+            width: 100%;
+            position: relative;
+            height: 393px;
+
+            @media only screen and (max-width: 1160px) {
+                max-width: calc(100% / 2);
+                margin-bottom: 16px;
+            }
+
+            @media only screen and (max-width: 767px) {
+                max-width: calc(100%);
+                margin-bottom: 16px;
+            }
+
+            &-photo {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            &-content {
+                @media only screen and (max-width: 1601px) {
+                    justify-content: center;
+                }
+
+                @media only screen and (max-width: 1160px) {
+                    justify-content: start;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    justify-content: end;
+                }
+
+                @media only screen and (max-width: 1160px) {}
+
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 18px;
+
+                h1 {
+                    font-size: 55px;
+                    color: var(--white);
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: var(--white);
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    margin-bottom: 8px;
+                }
+
+                .btn {
+                    max-width: 158px;
+                    height: 32px;
+                    margin-top: 16px;
+                    font-size: 16px;
+
+                    img {
+                        max-width: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cordless-systems-equipments-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 16px;
+
+        @media only screen and (max-width: 1601px) {
+            flex-wrap: wrap;
+        }
+
+        .cordless-systems-equipment {
+            max-width: calc(100% / 3 - 16px);
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #F0F0F0;
+            border: 1px solid #F0F0F0;
+            margin-bottom: 8px;
+            padding: 8px;
+
+            @media only screen and (max-width: 1601px) {
+                max-width: calc(100% / 2 - 16px);
+                justify-content: space-between;
+            }
+
+            @media only screen and (max-width: 991px) {
+                max-width: calc(100%) !important;
+            }
+
+            &-photo {
+                position: relative;
+                margin-right: 10px;
+
+                >img {
+                    max-width: 160px;
+                }
+
+                &-brand {
+                    position: absolute;
+                    top: 0px;
+                    left: 8px;
+                }
+            }
+
+            &-content {
+                h1 {
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    color: var(--secondary);
+                }
+
+                h4 {
+                    font-size: 18px;
+                    color: var(--grey);
+                    font-weight: bold;
+                    margin: 4px 0px;
+                }
+
+                p {
+                    font-size: 16px;
+                    text-transform: uppercase;
+
+                }
+
+                &-buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .btn {
+                        margin-top: 8px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.banner {
+    height: 526px;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    position: relative;
+    margin-top: 24px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.47);
+    }
+
+    &.banner-1 {
+        background: url('../imgs/banner-1-bg.png') center no-repeat;
+    }
+
+    &.banner-2 {
+        background: url('../imgs/banner-2.png') center no-repeat;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 81px;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--white);
+        height: 100%;
+        position: relative;
+        max-width: 1040px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.featured-products,
+.new-arrivials-products {
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 1160px) {
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+
+    }
+
+    .explore-products {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes sliderTransitionShow {
+    from {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes sliderTransitionHide {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-200%);
+        display: none;
+    }
+}
